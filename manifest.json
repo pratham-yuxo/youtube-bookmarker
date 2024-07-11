@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Bookmarking Extension",
+    "version": "1.0",
+    "description": "Bookmark YouTube videos at specific times with notes.",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  

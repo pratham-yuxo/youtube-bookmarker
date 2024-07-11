@@ -1,0 +1,131 @@
+.form__group {
+  position: relative;
+  padding: 2px 0 0 0;
+  /* margin-top: 10px; */
+  /* width: 50%; */
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  /* color: #fff; */
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 0.9rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 0.7rem;
+  /* color: #11998e; */
+  color: black;
+  /* font-weight: 700; */
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+/* demo */
+body {
+  font-family: "Poppins", sans-serif;
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.5rem; */
+  /* background-color: #222222; */
+}
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    width: 250px;
+    height: 300px;
+  }
+  .mainbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    gap: 10px;
+    flex-direction: column;
+    gap: 10px;
+    /* background-color: red; */
+  }
+  .timestamps{
+    /* background-color: green; */
+  }
+  #bookmarkBtn {
+    display: block;
+    margin-bottom: 10px;
+    padding: 6px 10px;
+    border-radius: 13px;
+  }
+  
+  #note {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #bookmarksList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #bookmarksList li {
+    margin-bottom: 5px;
+  }
+  /* setting the css of list */
+  a{
+    all: unset;
+    text-decoration: none;
+  }
+  #bookmarksList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+  }
+  #bookmarksList li{
+    width: 100%;
+    padding: 5px 20px;
+    font-size: 13px;
+    border: black 2px solid;
+    border-radius: 10px;
+  }
