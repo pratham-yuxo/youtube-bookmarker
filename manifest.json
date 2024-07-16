@@ -3,10 +3,7 @@
     "name": "YouTube Bookmarking Extension",
     "version": "1.0",
     "description": "Bookmark YouTube videos at specific times with notes.",
-    "permissions": [
-      "activeTab",
-      "storage"
-    ],
+    "permissions": ["storage", "activeTab", "tabs"],
     "background": {
       "service_worker": "background.js"
     },
