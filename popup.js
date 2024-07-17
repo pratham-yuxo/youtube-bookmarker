@@ -76,7 +76,9 @@ function displayBookmarksForCurrentVideo(url) {
 
         // Create a delete button
         const deleteBtn = document.createElement("button");
-        deleteBtn.textContent = "Delete";
+        // deleteBtn.textContent = "Delete";
+        deleteBtn.innerHTML='<i class="fa-solid fa-trash" style="color: #ff0000;"></i>'
+        deleteBtn.className="deletebtn"
         deleteBtn.addEventListener("click", () => {
           deleteBookmark(url, index);
         });
