@@ -17,12 +17,19 @@
 // name1();
 
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const currentUrl = tabs[0].url;
     displayBookmarksForCurrentVideo(currentUrl);
+  });
+
+  // Add event listeners for the tabs
+  document.getElementById("timestampsTab").addEventListener("click", () => {
+    showTab("timestampsContent");
+  });
+
+  document.getElementById("allBookmarksTab").addEventListener("click", () => {
+    showTab("allBookmarksContent");
   });
 });
 
@@ -76,9 +83,8 @@ function displayBookmarksForCurrentVideo(url) {
 
         // Create a delete button
         const deleteBtn = document.createElement("button");
-        // deleteBtn.textContent = "Delete";
-        deleteBtn.innerHTML='<i class="fa-solid fa-trash" style="color: #ff0000;"></i>'
-        deleteBtn.className="deletebtn"
+        deleteBtn.innerHTML = '<i class="fa-solid fa-trash" style="color: #ff0000;"></i>';
+        deleteBtn.className = "deletebtn";
         deleteBtn.addEventListener("click", () => {
           deleteBookmark(url, index);
         });
@@ -104,4 +110,12 @@ function deleteBookmark(url, index) {
       });
     }
   });
+}
+
+function showTab(tabId) {
+  const allTabs = document.querySelectorAll('.tab-content');
+  allTabs.forEach(tab => tab.classList.remove('active'));
+
+  const selectedTab = document.getElementById(tabId);
+  selectedTab.classList.add('active');
 }

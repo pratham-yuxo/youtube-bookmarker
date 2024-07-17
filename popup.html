@@ -9,7 +9,6 @@
 </head>
 <body>
   <div class="mainbox">
-    <!--  -->
     <!-- BUTTON -->
     <button id="bookmarkBtn">Bookmark</button>
     
@@ -19,19 +18,22 @@
       <label for="name" class="form__label">Add a note</label>
     </div>
     
-    <div class="timestamps">Timestamps</div>
-
-    <!-- <textarea rows="1"  type="text" id="note" placeholder="Add a note">
-    </textarea> -->
-    <ul id="bookmarksList">
-      <!-- <li><a rel="stylesheet" href="">Time: 1:23, Note: MyNote</a></li>
-      <li><a rel="stylesheet" href="">Time: 1:23, Note: MyNote</a></li>
-      <li><a rel="stylesheet" href="">Time: 1:23, Note: MyNote</a></li> -->
-      <!-- <li>Lorem ipsum dolor sit amet.</li> -->
-      <!-- <li>Lorem ipsum dolor sit amet.</li> -->
-      <!-- <li>Lorem ipsum dolor sit amet.</li> -->
-      <!-- <li>Lorem ipsum dolor sit amet.</li> -->
-    </ul>
+    <!-- TABS -->
+    <div class="tabs">
+      <button id="timestampsTab" class="tab active">Timestamps</button>
+      <button id="allBookmarksTab" class="tab">All Bookmarks</button>
+    </div>
+    
+    <!-- CONTENT -->
+    <div id="timestampsContent" class="tab-content active">
+      <div class="timestamps">Timestamps</div>
+      <ul id="bookmarksList"></ul>
+    </div>
+    
+    <div id="allBookmarksContent" class="tab-content">
+      <div class="all-bookmarks">All Bookmarks</div>
+      <ul id="allBookmarksList"></ul>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>
