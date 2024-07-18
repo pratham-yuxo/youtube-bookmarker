@@ -1,24 +1,3 @@
-// function name1() {
-  
-
-// const li = document.createElement("li");
-// const link = document.createElement("a");
-// const bookmarksList = document.getElementById("bookmarksList");
-// // bookmarksList.innerHTML = "";
-// link.href = `$s`;
-// link.textContent = `Time: 2:23 Note: heres note`;
-// const deleteBtn = document.createElement("button");
-// deleteBtn.textContent = "Delete";
-// li.appendChild(link);
-//         // li.appendChild(deleteBtn);
-//         bookmarksList.appendChild(li);
-// }
-// name1();
-// name1();
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const currentUrl = tabs[0].url;
