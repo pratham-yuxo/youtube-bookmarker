@@ -9,29 +9,32 @@
 </head>
 <body>
   <div class="mainbox">
-    <!--  -->
     <!-- BUTTON -->
     <button id="bookmarkBtn">Bookmark</button>
     
     <!-- INPUT FIELD -->
-     <div class="inputdiv">
+    <div class="inputdiv">
       <label for="inp" class="inp">
         <input type="text" id="note" placeholder="&nbsp;">
         <span class="label">Add a note</span>
         <span class="focus-bg"></span>
       </label>
-        <!-- <div class="form__group field">
-          <input type="text" id="note" class="form__field" placeholder="Add a note" name="name" />
-          <label for="name" class="form__label">Add a note</label>
-          </div> -->
-      </div>
-    
-    <div class="timestamps">Timestamps</div>
+    </div>
 
-    <!-- <textarea rows="1"  type="text" id="note" placeholder="Add a note">
-    </textarea> -->
-    <ul id="bookmarksList">
-    </ul>
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active" id="tab-timestamps">Timestamps</div>
+      <div class="tab" id="tab-all-bookmarks">All Bookmarks</div>
+      <div class="tab-indicator"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="content" id="content-timestamps">
+      <ul id="bookmarksList"></ul>
+    </div>
+    <div class="content" id="content-all-bookmarks" style="display: none;">
+      <ul id="allBookmarksList"></ul>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>

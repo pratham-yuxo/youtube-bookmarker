@@ -1,4 +1,13 @@
-
+body {
+  background-color: #f5f5f5 ;
+  font-family: "Poppins", sans-serif;
+    font-family: Arial, sans-serif;
+    /* padding: 10px; */
+    width: 250px;
+    height: 300px;
+    max-height: 300px;
+    color: #333333 ;
+  }
 .inp {
   position: relative;
   margin: auto;
@@ -78,24 +87,9 @@
 }
 
 /* demo */
-body {
-  font-family: "Poppins", sans-serif;
-  /* display: flex; */
-  /* flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-size: 1.5rem; */
-  background-color: #f5f5f5 ;
-}
+
 /* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    /* padding: 10px; */
-    width: 250px;
-    height: 300px;
-    color: #333333 ;
-  }
+
   .mainbox{
     display: flex;
     align-items: center;
@@ -110,6 +104,7 @@ body {
   #bookmarkBtn {
     display: block;
     /* margin-bottom: 10px; */
+    box-shadow: 2px 2px 3px grey;
     padding: 6px 10px;
     border-radius: 13px;
     cursor: pointer;
@@ -124,11 +119,9 @@ body {
   #bookmarksList {
     list-style-type: none;
     padding: 0;
+    width: 100%;
   }
-  
-  #bookmarksList li {
-    margin-bottom: 5px;
-  }
+
   /* setting the css of list */
   a{
     all: unset;
@@ -142,14 +135,17 @@ body {
     gap: 3px;
   }
   #bookmarksList li{
-    width: 100%;
+    /* width: 100%; */
     padding: 5px 20px;
     font-size: 13px;
     border: black 2px solid;
-    border-radius: 10px;
+    border-radius: 18px;
     display: flex;
     justify-content: space-between;
     cursor:pointer;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    width: 230px;
   }
   .timestamps{
     border-bottom: black solid 2px;
@@ -165,3 +161,78 @@ body {
     width: 100%;
     justify-content: center;
   }
+
+  /* tab functionality
+   */
+   /* New CSS for tabs */
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  margin-top: 10px;
+}
+
+.tab {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 2px;
+  background-color: #00ff40;
+  transition: transform 0.3s ease;
+}
+
+.tab.active {
+  font-weight: bold;
+}
+
+/* For the input div */
+.inputdiv {
+  margin-top: 10px;
+}
+/* Ensure same styling for all bookmarks list */
+#allBookmarksList {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+#allBookmarksList li {
+  padding: 5px 25px;
+  font-size: 13px;
+  border: black 2px solid;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  width: 230px;
+}
+
+#allBookmarksList a {
+  all: unset;
+  text-decoration: none;
+}
+
+#allBookmarksList .deletebtn {
+  border: none;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+/* .content li{
+  width: 100%;
+  border: 0px;
+/* } *
+black and shades #232323 #0f0f0f
+*/
