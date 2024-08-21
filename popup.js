@@ -90,6 +90,12 @@ function displayBookmarksForCurrentVideo(url) {
         
         link.href = `${bookmark.url}&t=${Math.floor(bookmark.time)}s`;
         link.textContent = `Time: ${bookmark.time.toFixed(2)}`;
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.tabs.update(tabs[0].id, { url: bookmark.url });
+          });
+        });
         
         summary.appendChild(link);
         details.appendChild(summary);
@@ -151,6 +157,12 @@ function displayAllBookmarks() {
         const details = document.createElement("details");
         const summary = document.createElement("summary");
         const link = document.createElement("a");
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.tabs.update(tabs[0].id, { url: bookmark.url });
+          });
+        });
         li.style.width="100%";
         li.style.border="0px";
         li.style.marginLeft="14px";
